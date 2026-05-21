@@ -1,4 +1,5 @@
 export interface FilmCardProps {
+    key: string;
     title: string;
     year: number;
     genre: string;

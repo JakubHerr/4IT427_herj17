@@ -1,45 +1,48 @@
-import { useState } from 'react'
 import {FilmCard, type FilmCardProps} from './components/FilmCard.tsx'
+import {useWatchlist} from "@/hooks/useWatchList.ts";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-    const films: FilmCardProps[] = [
+    const initialFilms: FilmCardProps[] = [
         {
+            key: "1",
             title: "Inception",
             year: 2010,
             genre: "Sci-fi",
             rating: 9,
             watched: true,
-            onToggleWatched: (title: string) => {
-                console.log(`${title} button clicked`);
-            },
         },
         {
+            key: "2",
             title: "The Matrix",
             year: 1999,
             genre: "Sci-fi",
             rating: 8,
             watched: false,
-            onToggleWatched: () => {},
         },
         {
+            key: "3",
             title: "Interstellar",
             year: 2014,
             genre: "Sci-fi",
             rating: 9,
             watched: true,
-            onToggleWatched: () => {},
         },
     ];
 
-  return (
-    <>
-        {films.map((film) => (
-            <FilmCard key={film.title} {...film} />
-        ))}
-    </>
-  )
+    const { films, toggleWatched, markAllAsWatched }= useWatchlist(initialFilms)
+
+    return (
+        <>
+            {films.map((film) => (
+                <FilmCard
+                    {...film}
+                    onToggleWatched={toggleWatched}
+                />
+            ))}
+             <p/>
+            <button onClick={markAllAsWatched}>Označit vše jako zhlédnuté</button>
+        </>
+    )
 }
 
 export default App
