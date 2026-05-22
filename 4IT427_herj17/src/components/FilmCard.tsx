@@ -10,14 +10,14 @@ export function FilmCard(props: Film) {
         <article
             className={`flex min-h-[210px] flex-col justify-between gap-4 rounded-2xl border bg-surface p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-primary ${
                 props.watched
-                    ? "border-success/60 bg-gradient-to-br from-green-50 to-emerald-50"
+                    ? "border-success/60 bg-success-subtle"
                     : "border-border"
             }`}
         >
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
                 <div>
-                    <h2 className="text-lg font-bold leading-tight text-gray-900">
+                    <h2 className="text-lg font-bold leading-tight text-text-base">
                         {props.title}
                     </h2>
                     <p className="mt-1 text-sm text-text-muted">

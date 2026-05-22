@@ -30,7 +30,7 @@ export function AddFilmForm() {
                 setRating("")
             }}
         >
-            <h2 className="text-xl font-bold text-gray-900">Přidat film</h2>
+            <h2 className="text-xl font-bold text-text-base">Přidat film</h2>
 
             <div className="grid gap-1.5">
                 <label htmlFor="title" className="text-sm font-bold text-text-muted">
@@ -43,7 +43,7 @@ export function AddFilmForm() {
                     placeholder="např. Forrest Gump"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-gray-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-base outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
             </div>
 
@@ -58,7 +58,7 @@ export function AddFilmForm() {
                     placeholder="např. 1994"
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
-                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-gray-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-base outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
             </div>
 
@@ -73,7 +73,7 @@ export function AddFilmForm() {
                     placeholder="např. Drama"
                     value={genre}
                     onChange={(e) => setGenre(e.target.value)}
-                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-gray-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-base outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
             </div>
 
@@ -90,7 +90,7 @@ export function AddFilmForm() {
                     placeholder="např. 9"
                     value={rating}
                     onChange={(e) => setRating(e.target.value)}
-                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-gray-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="w-full rounded-lg border border-border bg-surface-muted px-3 py-2.5 text-text-base outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
             </div>
 

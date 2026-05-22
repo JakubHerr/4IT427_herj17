@@ -1,5 +1,6 @@
 import { FilmCard } from './components/FilmCard.tsx'
 import { AddFilmForm } from "@/components/AddFilmForm.tsx";
+import { ThemeToggle } from "@/components/ThemeToggle.tsx";
 import {useWatchlist} from "@/hooks/useWatchList.ts";
 
 function App() {
@@ -24,12 +25,15 @@ function App() {
                     </p>
                 </div>
 
-                <button
-                    onClick={markAllAsWatched}
-                    className="shrink-0 cursor-pointer rounded-xl bg-white/20 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/30"
-                >
-                    Označit vše jako zhlédnuté
-                </button>
+                <div className="flex gap-3">
+                    <ThemeToggle />
+                    <button
+                        onClick={markAllAsWatched}
+                        className="shrink-0 cursor-pointer rounded-xl bg-white/20 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/30"
+                    >
+                        Označit vše jako zhlédnuté
+                    </button>
+                </div>
             </section>
 
             {/* Stats */}
