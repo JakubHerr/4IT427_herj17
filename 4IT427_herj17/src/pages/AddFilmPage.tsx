@@ -1,8 +1,10 @@
 import {useState} from "react";
 import {useWatchlist} from "@/hooks/useWatchList.ts";
+import { useNavigate } from "react-router";
 
 export function AddFilmPage() {
     const { addFilm } = useWatchlist()
+    const navigate = useNavigate()
 
     const [title, setTitle] = useState("")
     const [year, setYear] = useState("")
@@ -28,6 +30,8 @@ export function AddFilmPage() {
                 setYear("")
                 setGenre("")
                 setRating("")
+
+                navigate("/")
             }}
         >
             <h2 className="text-xl font-bold text-text-base">Přidat film</h2>
