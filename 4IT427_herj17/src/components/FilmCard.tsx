@@ -1,14 +1,9 @@
-export interface FilmCardProps {
-    key: string;
-    title: string;
-    year: number;
-    genre: string;
-    rating: number;
-    watched: boolean;
-    onToggleWatched: (title: string) => void;
-}
+import type {Film} from "@/types/film.types.ts";
+import {useWatchlist} from "@/hooks/useWatchList.ts";
 
-export function FilmCard(props: FilmCardProps) {
+export function FilmCard(props: Film) {
+    const { removeFilm } = useWatchlist();
+
     return (
         <>
             <h2>{props.title}</h2>
@@ -19,6 +14,9 @@ export function FilmCard(props: FilmCardProps) {
             { props.watched && <p>✓ Zhlédnuto</p> }
             <button onClick={() => props.onToggleWatched(props.title)}>
                 Změnit stav zhlédnutí
+            </button>
+            <button onClick={() => removeFilm(props.id)}>
+                Odstranit film
             </button>
         </>
     );

@@ -1,35 +1,10 @@
-import { useEffect, useState } from "react";
-import type {FilmCardProps} from "../components/FilmCard";
+import {useContext} from "react";
+import {WatchlistContext} from "@/context/WatchlistContext.tsx";
 
-export function useWatchlist(initialFilms: FilmCardProps[]) {
-    const [films, setFilms] = useState<FilmCardProps[]>(initialFilms);
-
-    function toggleWatched(title: string) {
-        setFilms((prev) =>
-            prev.map((film) =>
-                film.title === title
-                    ? { ...film, watched: !film.watched }
-                    : film
-            )
-        );
+export function useWatchlist() {
+    const context = useContext(WatchlistContext);
+    if (!context) {
+        throw new Error("useWatchlist musí být použitý uvnitř WatchlistProvider");
     }
-
-    function markAllAsWatched() {
-        setFilms((prev) =>
-            prev.map((film) => ({ ...film, watched: true }))
-        );
-    }
-
-    const watchedCount = films.filter((f) => f.watched).length;
-    const totalCount = films.length;
-
-    useEffect(() => {
-        document.title = `Watchlist (${watchedCount} / ${totalCount} zhlédnuto)`;
-    }, [watchedCount, totalCount]);
-
-    return {
-        films,
-        toggleWatched,
-        markAllAsWatched,
-    };
+    return context;
 }
