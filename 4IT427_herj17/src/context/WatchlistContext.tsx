@@ -4,6 +4,9 @@ import {useQuery} from "@tanstack/react-query";
 
 interface WatchlistContextValue {
     films: Film[];
+    isLoading: boolean;
+    isError: boolean;
+    error: Error | null;
     addFilm: (film: Film) => void;
     removeFilm: (id: string) => void;
     toggleWatched: (id: string) => void;
@@ -55,7 +58,7 @@ export function WatchlistProvider({ children }: { children: React.ReactNode }) {
     }, [watchedCount, totalCount]);
 
     return (
-        <WatchlistContext.Provider value={{ films, addFilm, removeFilm, toggleWatched, markAllAsWatched }}>
+        <WatchlistContext.Provider value={{ films, isLoading, isError, error: error as Error | null, addFilm, removeFilm, toggleWatched, markAllAsWatched }}>
             {children}
         </WatchlistContext.Provider>
     );

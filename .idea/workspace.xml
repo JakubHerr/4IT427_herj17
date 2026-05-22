@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344dda9c-155f-4078-828c-93fc47fa8289" name="Changes" comment="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu">
-      <change afterPath="$PROJECT_DIR$/4IT427_herj17/public/films.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/package.json" afterDir="false" />
+    <list default="true" id="344dda9c-155f-4078-828c-93fc47fa8289" name="Changes" comment="feat: Úkol 6 – Funkční fetch přes query (bez reakce na iserror/isloading)">
       <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/context/WatchlistContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/context/WatchlistContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/pages/WatchlistPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/pages/WatchlistPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,61 +46,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000010030952" />
-      <entry key="S30" value="1.0040103804258247" />
-      <entry key="S60" value="1.1841704665889021" />
-      <entry key="M2" value="2.43065078374173" />
-      <entry key="M5" value="7.999271496303272" />
-      <entry key="M10" value="16.47774466602266" />
-      <entry key="M15" value="27.375063189451666" />
-      <entry key="M30" value="100.70801402544822" />
-      <entry key="H1" value="325.7377588920202" />
-      <entry key="H2" value="679.7130193608906" />
-      <entry key="H4" value="1024.8539077628725" />
-      <entry key="D1" value="1479.547720461431" />
-      <entry key="W1" value="1579.5677867261832" />
+      <entry key="MS100" value="1.000016569140917" />
+      <entry key="MS500" value="1.1783900818794901" />
+      <entry key="S2" value="2.7705684421362116" />
+      <entry key="S5" value="6.0792182888167074" />
+      <entry key="S10" value="9.899858827504449" />
+      <entry key="S30" value="15.37432040646734" />
+      <entry key="S60" value="17.513801457360753" />
+      <entry key="M2" value="19.15561100257893" />
+      <entry key="M5" value="23.645499263961604" />
+      <entry key="M10" value="31.65262683846244" />
+      <entry key="M15" value="41.88613682594726" />
+      <entry key="M30" value="110.33371700405893" />
+      <entry key="H1" value="328.6158680680963" />
+      <entry key="H2" value="681.6343712745762" />
+      <entry key="H4" value="1031.1389189403471" />
+      <entry key="D1" value="1496.230077733105" />
+      <entry key="W1" value="1599.0613302802162" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="3.8294813159457793E-137" />
-      <entry key="S5" value="2.7117895446832504E-55" />
-      <entry key="S10" value="5.207484577488414E-28" />
-      <entry key="S30" value="8.064162005046522E-10" />
-      <entry key="S60" value="3.0304521221245607E-5" />
-      <entry key="M2" value="0.007295312848827485" />
-      <entry key="M5" value="0.24878949573835443" />
-      <entry key="M10" value="0.8850665219207746" />
-      <entry key="M15" value="1.4951244612976782" />
-      <entry key="M30" value="3.4816873954648675" />
-      <entry key="H1" value="8.373434575281015" />
-      <entry key="H2" value="17.36313188287753" />
-      <entry key="H4" value="27.440087381373637" />
-      <entry key="D1" value="42.044202893059754" />
-      <entry key="W1" value="45.40884169821135" />
+      <entry key="S2" value="3.0964796931691627E-179" />
+      <entry key="S5" value="3.947728659251058E-72" />
+      <entry key="S10" value="1.9868891980067694E-36" />
+      <entry key="S30" value="1.2601080791363856E-12" />
+      <entry key="S60" value="1.1979307223680064E-6" />
+      <entry key="M2" value="0.0014504610091850083" />
+      <entry key="M5" value="0.13038177676702134" />
+      <entry key="M10" value="0.6407200894107962" />
+      <entry key="M15" value="1.2054215888186353" />
+      <entry key="M30" value="3.1262275388143403" />
+      <entry key="H1" value="7.934490344218362" />
+      <entry key="H2" value="16.901909277949965" />
+      <entry key="H4" value="27.073184390393802" />
+      <entry key="D1" value="41.94998067094154" />
+      <entry key="W1" value="45.39429022058494" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7071067811865476" />
-      <entry key="MS500" value="0.9330329915368074" />
-      <entry key="S2" value="0.9828205985452511" />
-      <entry key="S5" value="0.9930924954370359" />
-      <entry key="S10" value="0.9965402638165753" />
-      <entry key="S30" value="1.002834996985101" />
-      <entry key="S60" value="1.183129315956915" />
-      <entry key="M2" value="2.434983787294613" />
-      <entry key="M5" value="8.23806327094043" />
-      <entry key="M10" value="17.3503919410508" />
-      <entry key="M15" value="28.858075906801915" />
-      <entry key="M30" value="104.17788460084297" />
-      <entry key="H1" value="334.0979949600683" />
-      <entry key="H2" value="697.0625942822007" />
-      <entry key="H4" value="1052.2831969996835" />
-      <entry key="D1" value="1521.5891279894076" />
-      <entry key="W1" value="1624.9761958550296" />
+      <entry key="MS100" value="0.9794365257398546" />
+      <entry key="MS500" value="1.1735000890553815" />
+      <entry key="S2" value="2.767748029110061" />
+      <entry key="S5" value="6.076745542641337" />
+      <entry key="S10" value="9.897796696337807" />
+      <entry key="S30" value="15.373219588481016" />
+      <entry key="S60" value="17.513130468882995" />
+      <entry key="M2" value="19.156134316675523" />
+      <entry key="M5" value="23.77050026926297" />
+      <entry key="M10" value="32.28428463903402" />
+      <entry key="M15" value="43.08174546093205" />
+      <entry key="M30" value="113.44931001048283" />
+      <entry key="H1" value="336.5378396846193" />
+      <entry key="H2" value="698.523077651476" />
+      <entry key="H4" value="1058.201446538151" />
+      <entry key="D1" value="1538.177268798086" />
+      <entry key="W1" value="1644.4551879978528" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -170,7 +166,7 @@
       <workItem from="1779281483585" duration="2298000" />
       <workItem from="1779348677383" duration="6320000" />
       <workItem from="1779434860061" duration="9352000" />
-      <workItem from="1779449759292" duration="4709000" />
+      <workItem from="1779449759292" duration="5027000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;feat: Úkol 1 – komponenta FilmCard s typed props&quot;">
       <option name="closed" value="true" />
@@ -236,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779451303480</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: Úkol 6 – Funkční fetch přes query (bez reakce na iserror/isloading)">
+      <option name="closed" value="true" />
+      <created>1779455570858</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1779455570858</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +266,7 @@
     <MESSAGE value="feat: Úkol 4 – Oneshot light/dark theme od Claude Code" />
     <MESSAGE value="feat: Úkol 5 – Basic routing" />
     <MESSAGE value="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu" />
+    <MESSAGE value="feat: Úkol 6 – Funkční fetch přes query (bez reakce na iserror/isloading)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Úkol 6 – Funkční fetch přes query (bez reakce na iserror/isloading)" />
   </component>
 </project>

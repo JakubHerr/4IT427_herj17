@@ -3,7 +3,10 @@ import {useWatchlist} from "@/hooks/useWatchList.ts";
 import {ThemeToggle} from "@/components/ThemeToggle.tsx";
 
 export function WatchlistPage() {
-    const { films, toggleWatched, markAllAsWatched } = useWatchlist();
+    const { films, isLoading, isError, error, markAllAsWatched, toggleWatched } = useWatchlist()
+
+    if (isLoading) return <p className="text-center text-text-muted py-16">Načítání filmů...</p>
+    if (isError) return <p className="text-center text-danger py-16">Chyba: {error?.message}</p>
 
     const watchedCount = films.filter((f) => f.watched).length;
     const totalCount = films.length;
