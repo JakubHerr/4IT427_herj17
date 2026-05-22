@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import type { Film } from "@/types/film.types.ts";
+import {useQuery} from "@tanstack/react-query";
 
 interface WatchlistContextValue {
     films: Film[];
@@ -11,35 +12,20 @@ interface WatchlistContextValue {
 
 export const WatchlistContext = createContext<WatchlistContextValue | null>(null);
 
-const initialFilms: Film[] = [
-    {
-        id: "1",
-        title: "Inception",
-        year: 2010,
-        genre: "Sci-fi",
-        rating: 9,
-        watched: true,
-    },
-    {
-        id: "2",
-        title: "The Matrix",
-        year: 1999,
-        genre: "Sci-fi",
-        rating: 8,
-        watched: false,
-    },
-    {
-        id: "3",
-        title: "Interstellar",
-        year: 2014,
-        genre: "Sci-fi",
-        rating: 9,
-        watched: true,
-    },
-];
-
 export function WatchlistProvider({ children }: { children: React.ReactNode }) {
-    const [films, setFilms] = useState<Film[]>(initialFilms);
+    const { data: initialFilms, isLoading, isError, error } = useQuery({
+        queryKey: ['films'],
+        queryFn: async () => fetch("/films.json").then(res => res.json() as Promise<Film[]>),
+        staleTime: 60_000
+    })
+
+    const [films, setFilms] = useState<Film[]>([]);
+
+    useEffect(() => {
+        if (initialFilms) {
+            setFilms(initialFilms);
+        }
+    }, [initialFilms]);
 
     function addFilm(film: Film) {
         setFilms((prev) => [...prev, film]);

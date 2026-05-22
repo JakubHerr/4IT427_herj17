@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344dda9c-155f-4078-828c-93fc47fa8289" name="Changes" comment="feat: Úkol 5 – Basic routing">
+    <list default="true" id="344dda9c-155f-4078-828c-93fc47fa8289" name="Changes" comment="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu">
+      <change afterPath="$PROJECT_DIR$/4IT427_herj17/public/films.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/pages/AddFilmPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/pages/AddFilmPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4IT427_herj17/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4IT427_herj17/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/context/WatchlistContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/context/WatchlistContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,61 +50,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.456576788601299E-10" />
-      <entry key="MS500" value="0.027664602658810974" />
-      <entry key="S2" value="3.322880953916728" />
-      <entry key="S5" value="10.294814865206167" />
-      <entry key="S10" value="15.30958273152249" />
-      <entry key="S30" value="20.357819218663693" />
-      <entry key="S60" value="22.540494768920382" />
-      <entry key="M2" value="25.208415217345983" />
-      <entry key="M5" value="37.41622772957482" />
-      <entry key="M10" value="77.69340188593007" />
-      <entry key="M15" value="136.5707001781406" />
-      <entry key="M30" value="328.8688280540231" />
-      <entry key="H1" value="621.7011962701107" />
-      <entry key="H2" value="934.0794076914943" />
-      <entry key="H4" value="1183.162935272703" />
-      <entry key="D1" value="1471.438102910974" />
-      <entry key="W1" value="1530.7796188198004" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000121876904" />
-      <entry key="S10" value="1.0001103978732375" />
-      <entry key="S30" value="1.0479719232739935" />
-      <entry key="S60" value="1.2191981688198765" />
-      <entry key="M2" value="1.4880450065105555" />
-      <entry key="M5" value="2.2627892876048463" />
-      <entry key="M10" value="3.5980861384836684" />
-      <entry key="M15" value="4.607632755266385" />
-      <entry key="M30" value="7.221243239153007" />
-      <entry key="H1" value="12.977918973950521" />
-      <entry key="H2" value="21.665640877457225" />
-      <entry key="H4" value="29.894755435776275" />
-      <entry key="D1" value="40.36220911246028" />
-      <entry key="W1" value="42.610145027484" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000010030952" />
+      <entry key="S30" value="1.0040103804258247" />
+      <entry key="S60" value="1.1841704665889021" />
+      <entry key="M2" value="2.43065078374173" />
+      <entry key="M5" value="7.999271496303272" />
+      <entry key="M10" value="16.47774466602266" />
+      <entry key="M15" value="27.375063189451666" />
+      <entry key="M30" value="100.70801402544822" />
+      <entry key="H1" value="325.7377588920202" />
+      <entry key="H2" value="679.7130193608906" />
+      <entry key="H4" value="1024.8539077628725" />
+      <entry key="D1" value="1479.547720461431" />
+      <entry key="W1" value="1579.5677867261832" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="3.8294813159457793E-137" />
+      <entry key="S5" value="2.7117895446832504E-55" />
+      <entry key="S10" value="5.207484577488414E-28" />
+      <entry key="S30" value="8.064162005046522E-10" />
+      <entry key="S60" value="3.0304521221245607E-5" />
+      <entry key="M2" value="0.007295312848827485" />
+      <entry key="M5" value="0.24878949573835443" />
+      <entry key="M10" value="0.8850665219207746" />
+      <entry key="M15" value="1.4951244612976782" />
+      <entry key="M30" value="3.4816873954648675" />
+      <entry key="H1" value="8.373434575281015" />
+      <entry key="H2" value="17.36313188287753" />
+      <entry key="H4" value="27.440087381373637" />
+      <entry key="D1" value="42.044202893059754" />
+      <entry key="W1" value="45.40884169821135" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.9936638120428473E-4" />
-      <entry key="MS500" value="0.2365688125706841" />
-      <entry key="S2" value="3.9942561206578233" />
-      <entry key="S5" value="11.143968601503325" />
-      <entry key="S10" value="16.229952877202248" />
-      <entry key="S30" value="21.373117749307916" />
-      <entry key="S60" value="23.73407983273286" />
-      <entry key="M2" value="26.676164310210606" />
-      <entry key="M5" value="39.65858082467776" />
-      <entry key="M10" value="81.26866753736827" />
-      <entry key="M15" value="141.1564215344667" />
-      <entry key="M30" value="336.07045996496294" />
-      <entry key="H1" value="634.6602215409506" />
-      <entry key="H2" value="955.7286679607384" />
-      <entry key="H4" value="1213.0461311534432" />
-      <entry key="D1" value="1511.7976539537258" />
-      <entry key="W1" value="1573.3893613703704" />
+      <entry key="MS100" value="0.7071067811865476" />
+      <entry key="MS500" value="0.9330329915368074" />
+      <entry key="S2" value="0.9828205985452511" />
+      <entry key="S5" value="0.9930924954370359" />
+      <entry key="S10" value="0.9965402638165753" />
+      <entry key="S30" value="1.002834996985101" />
+      <entry key="S60" value="1.183129315956915" />
+      <entry key="M2" value="2.434983787294613" />
+      <entry key="M5" value="8.23806327094043" />
+      <entry key="M10" value="17.3503919410508" />
+      <entry key="M15" value="28.858075906801915" />
+      <entry key="M30" value="104.17788460084297" />
+      <entry key="H1" value="334.0979949600683" />
+      <entry key="H2" value="697.0625942822007" />
+      <entry key="H4" value="1052.2831969996835" />
+      <entry key="D1" value="1521.5891279894076" />
+      <entry key="W1" value="1624.9761958550296" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -143,6 +147,7 @@
       <recent name="$PROJECT_DIR$/4IT427_herj17/src/types/film.types.ts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/4IT427_herj17" />
       <recent name="$PROJECT_DIR$/4IT427_herj17/src/pages" />
     </key>
   </component>
@@ -165,7 +170,7 @@
       <workItem from="1779281483585" duration="2298000" />
       <workItem from="1779348677383" duration="6320000" />
       <workItem from="1779434860061" duration="9352000" />
-      <workItem from="1779449759292" duration="1503000" />
+      <workItem from="1779449759292" duration="4709000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;feat: Úkol 1 – komponenta FilmCard s typed props&quot;">
       <option name="closed" value="true" />
@@ -223,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779450917387</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu">
+      <option name="closed" value="true" />
+      <created>1779451303480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779451303480</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +261,7 @@
     <MESSAGE value="feat: Úkol 4 – Oneshot UX/UI od Claude Code" />
     <MESSAGE value="feat: Úkol 4 – Oneshot light/dark theme od Claude Code" />
     <MESSAGE value="feat: Úkol 5 – Basic routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Úkol 5 – Basic routing" />
+    <MESSAGE value="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Úkol 5 – Přidání zpětné navigace po přidání filmu" />
   </component>
 </project>
