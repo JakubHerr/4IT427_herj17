@@ -6,4 +6,5 @@ export interface Film {
     genre: string;
     rating: number;
     watched: boolean;
+    onToggleWatched: (id: string) => void;
 }
