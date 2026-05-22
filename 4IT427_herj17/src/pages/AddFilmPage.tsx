@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {useWatchlist} from "@/hooks/useWatchList.ts";
 
-export function AddFilmForm() {
+export function AddFilmPage() {
     const { addFilm } = useWatchlist()
 
     const [title, setTitle] = useState("")
