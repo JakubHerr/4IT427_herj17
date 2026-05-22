@@ -11,12 +11,29 @@ export function AddFilmForm() {
 
     return (
         <>
-            <form>
-                <input type={"text"} value={title} onChange={(e) => setTitle(e.target.value)}/>
-                <input type={"text"} value={year} onChange={(e) => setYear(e.target.value)}/>
-                <input type={"text"} value={genre} onChange={(e) => setGenre(e.target.value)}/>
-                <input type={"text"} value={rating} onChange={(e) => setRating(e.target.value)}/>
-                {/*    TODO Add film*/}
+            <form onSubmit={(e) => {
+                e.preventDefault();
+
+                addFilm({
+                    id: crypto.randomUUID(),
+                    title,
+                    year: Number(year),
+                    genre,
+                    rating: Number(rating),
+                    watched: false,
+                })
+
+                setTitle("")
+                setYear("")
+                setGenre("")
+                setRating("")
+            }}>
+                <h2>Pridat film</h2>
+                <input type={"text"} required value={title} onChange={(e) => setTitle(e.target.value)}/>
+                <input type={"text"} required value={year} onChange={(e) => setYear(e.target.value)}/>
+                <input type={"text"} required value={genre} onChange={(e) => setGenre(e.target.value)}/>
+                <input type={"text"} required value={rating} onChange={(e) => setRating(e.target.value)}/>
+                <button type="submit">Přidat film</button>
             </form>
         </>
     )

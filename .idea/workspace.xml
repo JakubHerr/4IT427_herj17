@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344dda9c-155f-4078-828c-93fc47fa8289" name="Changes" comment="feat: Úkol 2 – useState, useEffect, custom hook useWatchlist">
-      <change afterPath="$PROJECT_DIR$/4IT427_herj17/src/components/AddFilmForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4IT427_herj17/src/context/WatchlistContext.tsx" afterDir="false" />
+    <list default="true" id="344dda9c-155f-4078-828c-93fc47fa8289" name="Changes" comment="feat: Úkol 3 – state management a film form (rozpracovaný)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/components/FilmCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/components/FilmCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/hooks/useWatchList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/hooks/useWatchList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/types/film.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/types/film.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4IT427_herj17/src/components/AddFilmForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/4IT427_herj17/src/components/AddFilmForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +46,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000056866089064" />
-      <entry key="S2" value="1.0494875838512467" />
-      <entry key="S5" value="1.3760080024975292" />
-      <entry key="S10" value="1.9388872565856912" />
-      <entry key="S30" value="4.787910041751317" />
-      <entry key="S60" value="14.29286313244547" />
-      <entry key="M2" value="41.86593910136756" />
-      <entry key="M5" value="131.1481658884833" />
-      <entry key="M10" value="229.92833071206982" />
-      <entry key="M15" value="288.89309503617693" />
-      <entry key="M30" value="386.9144764703642" />
-      <entry key="H1" value="484.4365697116503" />
-      <entry key="H2" value="569.7520485800839" />
-      <entry key="H4" value="630.2633856278097" />
-      <entry key="D1" value="694.3335345461949" />
-      <entry key="W1" value="706.8626772420548" />
+      <entry key="MS100" value="1.000000113563299" />
+      <entry key="MS500" value="1.0408364141841617" />
+      <entry key="S2" value="1.4495337699538415" />
+      <entry key="S5" value="1.729141354178388" />
+      <entry key="S10" value="1.9105548978939748" />
+      <entry key="S30" value="4.279988864241254" />
+      <entry key="S60" value="11.846499947973527" />
+      <entry key="M2" value="23.6258277500391" />
+      <entry key="M5" value="41.595691005145376" />
+      <entry key="M10" value="84.3051569237406" />
+      <entry key="M15" value="137.50514123863704" />
+      <entry key="M30" value="269.22700639793266" />
+      <entry key="H1" value="420.7662499788727" />
+      <entry key="H2" value="555.7156333444746" />
+      <entry key="H4" value="652.1764187382031" />
+      <entry key="D1" value="755.247915039956" />
+      <entry key="W1" value="775.53476828051" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.8157681350255466E-90" />
-      <entry key="MS500" value="1.2300404060578675E-18" />
-      <entry key="S2" value="3.330273062301434E-5" />
-      <entry key="S5" value="0.01618050000034351" />
-      <entry key="S10" value="0.1272025943145167" />
-      <entry key="S30" value="0.5029197107981462" />
-      <entry key="S60" value="0.7091999018179681" />
-      <entry key="M2" value="0.8484788392163707" />
-      <entry key="M5" value="1.1955749962955275" />
-      <entry key="M10" value="2.4143166335449595" />
-      <entry key="M15" value="4.054977897229924" />
-      <entry key="M30" value="9.034582722843806" />
-      <entry key="H1" value="15.563987761463487" />
-      <entry key="H2" value="21.294648160479877" />
-      <entry key="H4" value="25.181590432115282" />
-      <entry key="D1" value="29.122081821865777" />
-      <entry key="W1" value="29.87259916167534" />
+      <entry key="MS100" value="1.993575223235785E-148" />
+      <entry key="MS500" value="2.883543620189579E-30" />
+      <entry key="S2" value="4.120800896741646E-8" />
+      <entry key="S5" value="0.0011117685885223294" />
+      <entry key="S10" value="0.03360327678353733" />
+      <entry key="S30" value="0.4133207042240868" />
+      <entry key="S60" value="0.9882706054588368" />
+      <entry key="M2" value="1.6676129116917835" />
+      <entry key="M5" value="2.4569649317429483" />
+      <entry key="M10" value="3.41945465637445" />
+      <entry key="M15" value="4.615193771365609" />
+      <entry key="M30" value="8.918934803111586" />
+      <entry key="H1" value="15.903860832003456" />
+      <entry key="H2" value="22.973794739759295" />
+      <entry key="H4" value="28.171037358165012" />
+      <entry key="D1" value="33.726190406197766" />
+      <entry key="W1" value="34.81436457216727" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.332001262077462E-6" />
-      <entry key="MS500" value="0.07474027584563328" />
-      <entry key="S2" value="0.5587536008782271" />
-      <entry key="S5" value="1.1243859322889436" />
-      <entry key="S10" value="1.8989588499588839" />
-      <entry key="S30" value="5.2160807984922695" />
-      <entry key="S60" value="14.960043441390196" />
-      <entry key="M2" value="42.691405410715575" />
-      <entry key="M5" value="132.33018604401255" />
-      <entry key="M10" value="232.3264742154181" />
-      <entry key="M15" value="292.9286445623266" />
-      <entry key="M30" value="395.9254476052797" />
-      <entry key="H1" value="499.97861554280604" />
-      <entry key="H2" value="591.0308740750376" />
-      <entry key="H4" value="655.4353307984692" />
-      <entry key="D1" value="723.4537053365484" />
-      <entry key="W1" value="736.7349949841112" />
+      <entry key="MS100" value="4.238332181771213E-7" />
+      <entry key="MS500" value="0.053237116104665964" />
+      <entry key="S2" value="0.5788522407165873" />
+      <entry key="S5" value="1.1450382459366717" />
+      <entry key="S10" value="1.577434041157969" />
+      <entry key="S30" value="4.522462732589641" />
+      <entry key="S60" value="12.704898191442794" />
+      <entry key="M2" value="25.186636258635925" />
+      <entry key="M5" value="43.98486872904646" />
+      <entry key="M10" value="87.68061197900123" />
+      <entry key="M15" value="142.08455535960246" />
+      <entry key="M30" value="278.1165244792099" />
+      <entry key="H1" value="436.6451514734056" />
+      <entry key="H2" value="578.6713063702156" />
+      <entry key="H4" value="680.3362100498632" />
+      <entry key="D1" value="788.9718275983056" />
+      <entry key="W1" value="810.3487959350815" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -167,7 +161,7 @@
       <workItem from="1779276398730" duration="39000" />
       <workItem from="1779281483585" duration="2298000" />
       <workItem from="1779348677383" duration="6320000" />
-      <workItem from="1779434860061" duration="3729000" />
+      <workItem from="1779434860061" duration="5334000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;feat: Úkol 1 – komponenta FilmCard s typed props&quot;">
       <option name="closed" value="true" />
@@ -185,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779365705864</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Úkol 3 – state management a film form (rozpracovaný)">
+      <option name="closed" value="true" />
+      <created>1779438764048</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779438764048</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +196,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;feat: Úkol 1 – komponenta FilmCard s typed props&quot;" />
     <MESSAGE value="feat: Úkol 2 – useState, useEffect, custom hook useWatchlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Úkol 2 – useState, useEffect, custom hook useWatchlist" />
+    <MESSAGE value="feat: Úkol 3 – state management a film form (rozpracovaný)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Úkol 3 – state management a film form (rozpracovaný)" />
   </component>
 </project>
